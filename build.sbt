@@ -19,6 +19,12 @@ resolvers += "Akka Maven Repository" at "http://repo.akka.io/releases"
 resolvers += "Spray Maven Repository" at "http://repo.spray.io"
 
 //---------------------------------------------------------------------
+// JDK used: "1.8.0_25"
+// Updated rpc_address in 
+//    dse/nodes/node1/resources/cassandra/conf/cassandra.yaml
+// with address seen externally: "10.0.2.15" 
+// to access it from external machine
+//---------------------------------------------------------------------
 // about spark-scala versions : see http://stackoverflow.com/questions/26351338/running-spark-scala-example-fails
 //val sparkVer = "1.2.0"
 val sparkVer = "1.1.0"
