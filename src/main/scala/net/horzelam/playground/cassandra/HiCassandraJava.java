@@ -13,7 +13,7 @@ public class HiCassandraJava {
 		out.printf("Hello spark...");
 
 		Cluster cluster = Cluster.builder().withPort(9042)
-				.addContactPoint("localhost").build();
+				.addContactPoint("127.0.0.1").build();
 
 		// ------------------------- Cluster INFO
 		Metadata metadata = cluster.getMetadata();

@@ -15,9 +15,10 @@ import com.datastax.spark.connector.toSparkContextFunctions
 
 object HiSpark extends App with Logging {
   val conf = new SparkConf(true)
-    .set("spark.cassandra.connection.host", "localhost")
+    .set("spark.cassandra.connection.host", "127.0.0.1")
     .setAppName("Simple HiSpark Application")
-    .setMaster("spark://localhost:7077")
+    //.setMaster("spark://127.0.0.1:7077")
+    .setMaster("local")
 
   //C ports:
   //storage port 7000
