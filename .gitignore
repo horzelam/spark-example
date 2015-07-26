@@ -4,3 +4,9 @@
 /project/project/
 /project/target/
 /target/
+/bin/
+
+
+.cache*
+.classpath
+.project
