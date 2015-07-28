@@ -14,11 +14,9 @@ import com.datastax.spark.connector.toSparkContextFunctions
 //2. check: https://github.com/datastax/spark-cassandra-connector/blob/21bce3fe1a37169762e6a217a56b34d3739c462a/spark-cassandra-connector-demos/simple-demos/src/main/scala/com/datastax/spark/connector/demo/WordCountDemo.scala
 
 object HiSpark extends App with Logging {
-  val conf = new SparkConf(true)
-    .set("spark.cassandra.connection.host", "10.0.2.15")
-    .setAppName("Simple HiSpark Application")
+  val conf = new SparkConf(true).set("spark.cassandra.connection.host", "127.0.0.1").setAppName("Simple HiSpark Application").setMaster("local")
     //.setMaster("spark://127.0.0.1:7077")
-    .setMaster("local")
+    
 
   //C ports:
   //storage port 7000
