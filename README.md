@@ -1,2 +1,2 @@
 # spark-example
-Simplest Spark-Cassandra application
+Spark-Cassandra code example
