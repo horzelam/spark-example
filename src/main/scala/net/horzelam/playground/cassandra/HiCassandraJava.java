@@ -13,6 +13,7 @@ public class HiCassandraJava {
 		out.printf("Hello spark...");
 
 		Cluster cluster = Cluster.builder().withPort(9042)
+				//to work with VBox: .addContactPoint("10.0.2.15").build();
 				.addContactPoint("127.0.0.1").build();
 
 		// ------------------------- Cluster INFO
