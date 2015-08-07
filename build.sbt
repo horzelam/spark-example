@@ -4,6 +4,7 @@ version := "1.0.0"
 
 //scalaVersion := "2.11.7"
 scalaVersion := "2.10.5"
+//scalaVersion := "2.10.4"
 
 //libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.4" % "test"
 
@@ -17,6 +18,7 @@ scalaVersion := "2.10.5"
 //resolvers += "Local Maven Repository" at "file:///"+Path.userHome+"/.m2/repository"
 resolvers += "Akka Maven Repository" at "http://repo.akka.io/releases"
 resolvers += "Spray Maven Repository" at "http://repo.spray.io"
+resolvers += "Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/"
 
 //---------------------------------------------------------------------
 // JDK used: "1.8.0_25"
@@ -27,7 +29,9 @@ resolvers += "Spray Maven Repository" at "http://repo.spray.io"
 //---------------------------------------------------------------------
 // about spark-scala versions : see http://stackoverflow.com/questions/26351338/running-spark-scala-example-fails
 //val sparkVer = "1.2.0"
-val sparkVer = "1.1.0"
+//val sparkVer = "1.1.0"
+val sparkVer = "1.4.1"
+
 
 // most of libs had: ,provided
 libraryDependencies ++= Seq(
@@ -58,6 +62,9 @@ libraryDependencies ++= Seq(
 "com.datastax.spark" %% "spark-cassandra-connector" % "1.2.4"
 // on our C: connector is version: 2.10_1.2.1
 
+,"com.typesafe.play" %% "play-json" % "2.2.1"
+//,"com.typesafe.play" %% "play-json" % "2.3.4"
+//, "play" % "play_2.10" % "2.1.0"
 
 )
 
