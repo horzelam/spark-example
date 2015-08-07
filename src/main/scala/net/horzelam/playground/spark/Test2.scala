@@ -9,7 +9,7 @@ import org.apache.spark.rdd.RDD
 
 object Test2 {
   class Record(val name: String, val org_reference: String, val created_at: DateTime, val updated_at: DateTime, val original_meta: String, val other: String) extends java.io.Serializable {
-    def key() = {
+    def groupingKey() = {
       name + "_" + org_reference + "_" + created_at
     }
     override def toString() = {
@@ -32,7 +32,7 @@ object Test2 {
         new Record(data(0), data(1), DateTime.parse(data(2)), DateTime.parse(updatedAt), data(3), data(4))
       }
     }
-    records.map(record => (record.key() -> record))
+    records.map(record => (record.groupingKey() -> record))
       .reduceByKey(
         (r1, r2) =>
           {
@@ -41,6 +41,8 @@ object Test2 {
             else
               r1
           })
+          
+      
       .foreach { x => println(" data: " + x._1 + " -- " + x._2) }
 
     println("stopping spark...")
